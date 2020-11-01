@@ -1,0 +1,294 @@
+<!DOCTYPE HTML>
+<!--
+	Dimension by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Georgi's personal website</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/academicons.min.css"/>
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script type="text/javascript" async
+    		src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+  		</script>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="logo">
+							<img src="images/logo_white.svg" class="Georgi Dikov"/>
+						</div>
+						<div class="content">
+							<div class="inner">
+								<h1>Georgi Dikov</h1>
+								<p>R&D Software Engineer | Mainly teaching machines to learn.</p>
+								<!-- begin social menu -->
+								<div>
+									<ul class="actions" style="display: flex; justify-content: center;">
+										<li><a href="mailto:gvdikov@gmail.com" class="fas fa-envelope fa-2x"></a></li>
+										<li><a href="https://github.com/gdikov" class="fab fa-github fa-2x"></a></li>
+										<li><a href="https://scholar.google.com/citations?hl=en&user=iPQ7vOwAAAAJ" class="ai ai-google-scholar-square ai-2x"></a></li>
+									</ul>
+								</div>
+								<!-- end social menu -->
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li><a href="#about">About</a></li>
+								<li><a href="#work">Research</a></li>
+								<li><a href="#misc">Misc</a></li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+						<!-- About -->
+						<article id="about">
+							<h1 class="major">About</h1>
+							<span class="image right">
+								<img src="images/me.jpg" alt=""/>
+							</span>
+							<p align="justify">
+								I think of myself primarily as an engineer with a sense of appreciation for science and mathematics. 
+								Machine learning, being in the intersection of those, has driven my career plans ever since my early
+								undergraduate studies. Among other topics I am quite interested in the interplay of generative and 
+								discriminative models, probabilistic inference and representation learning.
+								If you are curious what keeps me busy at day and occasionally at night, visit my research page below.
+							</p>
+							<p align="justify">
+								I grew up in Sofia, Bulgaria and I remember having a very social childhood, mostly because computers 
+								and internet weren't so ubiquitous at the time (somewhere in the late 90s and early 2000s). This 
+								taught me to value relationships with people and identify authenticity. Perhaps as a consequence, 
+								I also developed a natural desire to read books, learn foreign languages and explore the world. 
+							</p>	
+							<p align="justify">	
+								Today you can probably find me somewhere in Amsterdam, working, learning, climbing or simply enjoying myself 
+								in the company of my soulmate.
+							</p>
+							<div class="actions">
+								<a href="files/resume.pdf" class="button primary icon solid fa-download">Resume</a>
+								<a style="float: right" href="#work" class="button icon solid fa-arrow-right">Research</a>
+							</div>
+						</article>
+
+						<!-- Work -->
+						<article id="work">
+							<h1 class="major">Research</h1>
+							<!-- Master student -->
+							<section>
+								<h2>
+									Calibrated stochastic semantic segmentation
+								</h2>
+								<h5><a href="https://arxiv.org/pdf/2006.13144.pdf">Paper</a> | 
+									<a href="https://github.com/EliasKassapis/CARMSS">Code</a>
+								</h5>
+								<br>
+								<h4>Meta</h4>
+								<p align="justify">
+									This work was a cornerstone in my ML career as it was the first project that I had 
+									the opportunity to supervise. Kudos to my student 
+									<a href="https://nl.linkedin.com/in/elias-kassapis-75b258144">Elias Kassapis</a> for his great work!
+									The project was also co-supervised by my colleague <a href="www.cedricnugteren.nl">Cedric Nugteren</a> 
+									from TomTom and <a href="https://dkgupta90.github.io">Deepak Gupta</a> from the University of Amsterdam.
+								</p>
+								<h4>Summary</h4>
+								<p align="justify">
+									We endow conventional image segmentation networks \(F\) with the ability to predict multiple 
+									hypotheses \((y^1, y^2, \dots y^M)\) for the same input \(x\). First we train \(F\) to maximise a 
+									pixel-wise categorical likelihood over the data. Then we train adversarially a stochastic refinement 
+									network \(G\) together with a discriminator \(D\) to produce consistent segmentation maps. 
+									In the same time, the variety in the output of \(G\) is controlled by a <i>calibration loss</i> 
+									mechanism \(\mathcal{L}_\text{cal}\) that reuses the output of \(F\).
+								</p>
+								<p align="justify">
+									The image below summarises the approach in a worked example of an ambiguous problem, segmenting red from
+									blue pixels, given conflicting labels. Notice that the output of \(F\) can be used to compute the 
+									per-pixel uncertainty in the data, while the task of \(G\) is to sample realistic segmentation proposals.
+								</p>
+								<span class="image main"><img src="images/carmss.png" alt="" /></span>
+								<p align="justify">
+									This type of ambiguous segmentation problems occur naturally in many applications, such as 
+									medical image diagnostics, autonomous driving and map making to name a few. Check out the paper 
+									for more detailed explanations or <a href="https://github.com/gdikov/calibrated-adversarial-learning">this reimplementation</a> 
+									for a quick start using an illustrative bimodal regression example.
+								</p>
+								<hr />
+							</section>
+							<!-- Master thesis -->
+							<section>
+								<h2>
+									Bayesian learning of neural network depth and width
+								</h2>
+								<h5>
+									<a href="https://arxiv.org/pdf/1901.04436.pdf">Paper</a> | 
+									<a href="https://argmax.ai/blog/archopt/">Blog</a> | 
+									<a href="https://github.com/gdikov/bayesian-architecture-learning">Code</a>
+								</h5>
+								<br>
+								<h4>Meta</h4>
+								<p align="justify">
+									This work was a significant part of my Master thesis project, supervised by 
+									<a href="https://argmax.ai/team/justin-bayer/">Justin Bayer</a> at the 
+									<a href="https://argmax.ai/about/">Volkswagen ML research lab</a>.
+								</p>
+								<h4>Summary</h4>
+								<p align="justify">
+									The search for better network architectures can be very computationally demanding because 
+									the evaluation of each configuration requires network building, retraining and validation.
+									We propose an approximate network architecture search by learning the layer size and network
+									depth in parallel to training. 
+								</p>
+								<p align="justify">
+									This is done by framing the search problem as a probabilistic inference. Using the tools of 
+									approximate variational learning and concrete distributions we can learn distributions over the 
+									architectural parameters, updated continuously with each backpropagation step. The following animation
+									shows how the mean and the variance of the estimated layer size changes over time.
+								</p>
+								<span class="image main"><img src="images/bal_layer_size.gif" alt="" /></span>
+								<p align="justify">
+									In our paper we apply this technique on fully Bayesian networks for regression, image classification 
+									or value function estimation in contextual bandits. For a high level overview of the approach, 
+									have a look at my blog post linked above.
+								</p>
+								<hr />
+							</section>
+							<!-- Internship in EP -->
+							<section>
+								<h2>
+									On the utility and vulnerability of sanitised geolocation datasets
+								</h2>
+								<h5>
+									<a href="https://hal.archives-ouvertes.fr/hal-02423337/file/adriano.pdf">Paper</a>
+								</h5>
+								<br>
+								<h4>Meta</h4>
+								<p align="justify">
+									In my last year as a graduate student, I did a three month research internship at 
+									Ecole Polytechnique in Paris, in the lab Comète headed by
+									<a href="http://www.lix.polytechnique.fr/~catuscia/">Catuscia Palamidessi</a>. 
+									My work contributed to the research of 
+									<a href="https://scholar.google.com/citations?user=0uKaYW8AAAAJ&hl=en">Adriano Di Luzio</a>.
+								</p>
+								<h4>Summary</h4>
+								<p align="justify">
+									The anonymity of location-based sensitive data can be compromised if some data samples stand out from the rest. 
+									Differential privacy is a mechanism to prevent this, e.g. by obfuscating the data samples with noise such that 
+									statistics about a large group of individuals are not heavily influenced. 
+								</p>
+								<p align="justify">
+									This work explores how much noise is required to prevent an adversary from deanonymising traces of people, 
+									while maintaining the utility of the dataset for other research purposes.
+									To this end, we have trained recurrent neural networks to assign traces to individuals and evaluated the 
+									utility in mobile hotspot and gossip protocols with and without the protection of a geo-indistinguishability mechanism.
+								</p>
+								<p align="justify">
+									The results are rather interesting! It turns out that existing noise obfuscation approaches are not powerful enough to 
+									preserve anonymity without rendering the datasets unusable, at least from the point of view of the tested protocols.
+								</p>
+								<hr />
+							</section>
+							<!-- Bachelor thesis -->
+							<section>
+								<h2>
+									Stereo vision with spiking neural networks
+								</h2>
+								<h5>
+									<a href="https://www.researchgate.net/profile/Christoph_Richter9/publication/318449954_Spiking_Cooperative_Stereo-Matching_at_2_ms_Latency_with_Neuromorphic_Hardware/links/59df0682a6fdcca0d32e021b/Spiking-Cooperative-Stereo-Matching-at-2-ms-Latency-with-Neuromorphic-Hardware.pdf">Paper</a> | 
+									<a href="https://github.com/gdikov/hybrid-stereo-matching">Code</a>
+								</h5>
+								<br>
+								<h4>Meta</h4>
+								<p align="justify">
+									This work was done as part of my Bachelor thesis and later extended to a publication. It was supervised by 
+									<a href="https://scholar.google.com/citations?user=HQaluXUAAAAJ&hl=en&oi=ao">Christoph Richter</a>.
+								</p>
+								<h4>Summary</h4>
+								<p align="justify">
+									Neuromorphic hardware refers to devices which mimic the function of biological neural systems.
+									In this work we implement a spiking neural network for stereo matching, emulated on a massively parallel, 
+									densely connected, low power computer called SpiNNaker. The inputs were streamed from two dynamic vision sensors,
+									aka silicon retina cameras. 
+								</p>
+								<p align="justify">
+									The main challenge consisted in representing the estimated disparity between the left and right camera streams 
+									as simple gates of spiking neurons, while maintaining scalability and efficiency to allow real-time computation.
+									The video below shows the input streams as perceived by the retina sensors and the estimated disparity at any moment of time.
+								</p>
+								<span class="image main"><img src="images/ssn_pendulum.gif" alt="" /></span>
+								<hr />
+							</section>
+							<!-- Other projects -->
+							<section>
+								<h2>
+									Honourable mentions
+								</h2>
+								<h4>
+									Protein function prediction 
+									(<a href="https://arxiv.org/pdf/1704.04039.pdf">Paper</a> | 
+									<a href="https://github.com/gdikov/protein-function-prediction">Code</a>)
+								</h4>
+								<p align="justify">
+									<span class="image right"><img src="images/protfun_3d.png" alt="" /></span>
+									Convolutional neural networks for protein function prediction from 3D physical fields such as 
+									electron density and electrostatic potential.
+									This work was a collaboration with my colleague and friend 
+									<a href="https://argmax.ai/team/atanas-mirchev/">Atanas Mirchev</a>.
+								</p>
+								<h4>
+									Siamese variational autoencoders (<a href="https://github.com/gdikov/vae-playground">Code</a>)
+								</h4>
+								<p align="justify">
+									<span class="image right"><img src="images/svae_scheme.png" alt="" /></span>
+									Variational autoencoders applied on two data modalities with a partitioned latent space to 
+									accommodate the common and the independent features between the two data sources. 
+									This allows to generate mixed data points by sampling from the inferred shared latent space 
+									from one of the branches and the private latent space from the other. See the example image on the right.
+								</p>
+								<hr />
+							</section>
+							<div class="actions">
+								<a href="#about" class="button icon solid fa-arrow-left">About</a>
+								<a style="float: right;" href="#misc" class="button icon solid fa-arrow-right">Misc</a>
+							</div>
+						</article>
+						
+						<!-- Misc -->
+						<article id="misc">
+							<h2 class="major">Miscellaneous</h2>
+							<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
+							<p>Content coming soon.</p>
+							<div class="actions">
+								<a href="#work" class="button icon solid fa-arrow-left">Research</a>
+							</div>
+						</article>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy; Georgi Dikov. Design: <a href="https://html5up.net">HTML5 UP</a>. Background image: <a href="https://unsplash.com/photos/r_UXp6HtMWc">Unsplash</a>.</p>
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

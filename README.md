@@ -1,2 +1,1 @@
-# gdikov.github.io
-About me
+Coming soon...
