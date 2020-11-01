@@ -762,10 +762,6 @@ ul.actions li {
   vertical-align: middle;
 }
 
-ul.actions li.right {
-  padding-left: 50%;
-}
-
 ul.actions.special {
   -moz-justify-content: center;
   -ms-justify-content: center;
