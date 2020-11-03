@@ -264,9 +264,39 @@
 						
 						<!-- Misc -->
 						<article id="misc">
-							<h2 class="major">Miscellaneous</h2>
-							<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
-							<p>Content coming soon.</p>
+							<h1 class="major">Miscellaneous</h1>
+							<section>
+								<h2>
+									<span class="image right"><img src="images/hypertunity.png" height="155" alt=""/></span>
+									Hypertunity: A toolset for black-box hyperparameter optimisation
+								</h2>
+								<h5>
+									<a href="https://hypertunity.readthedocs.io/">Docs</a> | 
+									<a href="https://github.com/gdikov/hypertunity">Code</a>
+								</h5>
+								<br>
+								<h4>Summary</h4>
+								<p align="justify">
+									Hypertunity was a free time project which got inspired from work I have done at TomTom, where we would evaluate 
+									in parallel multiple configurations of production models to fine-tune some hyperparameters. 
+								</p>
+								<p>
+									<div>In short, it is a lightweight, high-level Python library for hyperparameter optimisation. Among others, it supports:
+										<ul>
+											<li>Bayesian optimisation by wrapping GPyOpt,</li>
+											<li>external or internal objective evaluation using a scheduler, also compatible with Slurm</li>
+											<li>real-time visualisation of results in Tensorboard using the HParams plugin.</li>
+										</ul>
+									</div>
+									Its main guiding design principles are:
+									<ul>
+										<li><b>Modular</b>: you can use any optimiser and reporter as well as schedule jobs locally or on Slurm without changes in the API.</li>
+										<li><b>Simple</b>: the small codebase (just about 1000 LOC) and the flat subpackage hierarchy makes it easy to use, maintain and extend.</li>
+										<li><b>Extensible</b>: base classes such as Optimiser, Job and Reporter allow for seamless implementation of customized functionality.</li>
+									</ul>
+								</p>
+								<hr />
+							</section>
 							<div class="actions">
 								<a href="#work" class="button icon solid fa-arrow-left">Research</a>
 							</div>
