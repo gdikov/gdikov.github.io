@@ -1,1 +1,1 @@
-Personal website: www.gdikov.me
+Personal website: www.gdikov.com
